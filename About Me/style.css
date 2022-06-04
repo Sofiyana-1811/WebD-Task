@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Plus:ital@0;1&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+    font-family: 'Gentium Plus', serif;
+}
+:root{
+    --color: black;
+}
+section{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: #e5be01;
+}
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2.5rem;
+    align-items: center;
+    justify-content: center;
+}
+.left img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: left;
+    clip-path: circle();
+}
+.right > *{
+    margin-bottom: 1.1rem;
+    color: rgb(0, 0, 0);
+}
+.btn{
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 25px;
+    border: 2px solid var(--color);
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+
+}
+.btn::after{
+    content: "";
+    background: #d31900;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    z-index: -1;
+    transition: width .10s ease;
+}
+.btn:hover::after{
+    width: 100%;
+}
+.right h4{
+    font-weight: 500;
+    background: var(--color);
+    display: inline-block;
+    padding: 5px 15px;
+    font-size: 4px;
+}
+.right h1{
+    font-size: 2rem;
+    font-weight: 800;
+}
+.right p{
+    text-align: justify;
+}
+.links {
+    height: 100px;
+    width: 100px;
+    background-color: #f5f6fa;
+    border-radius: 50%;
+    text-align: center;
+    margin: 10px;
+    line-height: 100px;
+    box-shadow: 1px 4px 2px 2px #dcdde1;
+
+}
+a i{
+    
+    transition: all 0.3s linear; 
+ }
+ a:hover i{
+     transform: scale(1.6);
+ }
+
+ .fa-instagram{
+     color:#e84393
+ }
+
+.fa-linkedin{
+    color: #0097e6
+}
+
+.fa-twitter{
+    color: #0097e6
+}
+.fa-github{
+    color:black
+}
